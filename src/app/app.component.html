@@ -1,9 +1,12 @@
-<div class="main-container">
-
-  <div class="carousel">
+<section>
+<div class="carousel">
+  <div class="carousel-container" [ngClass]="{
+  'forward-animation': forwardAnimation,
+  'backwards-animation': backwardsAnimation
+  }">
     <div #leftCard class="left-card"></div>
     <div #mainCard class="card">
-      <div class="btn-row">
+      <div class="btn-row" *ngIf="!forwardAnimation && !backwardsAnimation">
         <button (click)="backwards()">
         <span class="material-symbols-outlined">
 arrow_back_ios
@@ -19,5 +22,5 @@ arrow_forward_ios
     </div>
     <div #rightCard class="right-card"></div>
   </div>
-
 </div>
+</section>
