@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   @ViewChild('leftCard', {static: true}) leftCard!: ElementRef;
   @ViewChild('rightCard', {static: true}) rightCard!: ElementRef;
 
-  private images = ['land', 'mountain', 'sea'];
+  private images = ['land', 'mountain', 'sea', 'sky'];
   forwardAnimation = false;
   backwardsAnimation = false;
 
